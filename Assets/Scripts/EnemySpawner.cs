@@ -10,12 +10,12 @@ public class EnemySpawner : MonoBehaviour
 
     private void OnEnable()
     {
-        
+        StartCoroutine(SpawnRoutine());
     }
 
     private void OnDisable()
     {
-        
+        StopAllCoroutines();
     }
 
     IEnumerator SpawnRoutine()
