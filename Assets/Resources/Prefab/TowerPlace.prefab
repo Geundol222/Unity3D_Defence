@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6758693417604503938}
   - component: {fileID: 6768764302751866382}
   - component: {fileID: 1882969840149031495}
+  - component: {fileID: 5812717512023870700}
   m_Layer: 0
   m_Name: TowerPlace
   m_TagString: Untagged
@@ -97,3 +98,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5812717512023870700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6753334869506545340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3174040d8555234d89eeda6d5b3f067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normal: {r: 1, g: 1, b: 1, a: 1}
+  onMouse: {r: 1, g: 0.2688679, b: 0.2688679, a: 1}
