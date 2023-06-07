@@ -12,11 +12,11 @@ public class GameSetting : MonoBehaviour
 
     private static void InitGameManager()
     {
-        if (GameManager.Instance == null)
+        if (HomeWork0607.GameManager.Instance == null)
         {
             GameObject gameManager = new GameObject();
             gameManager.name = "GameManager";
-            gameManager.AddComponent<GameManager>();
+            gameManager.AddComponent<HomeWork0607.GameManager>();
         }
     }
 }
