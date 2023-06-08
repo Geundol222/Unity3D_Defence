@@ -19,11 +19,10 @@ public class TowerPlace : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         if (eventData.button == PointerEventData.InputButton.Left)
         {
-            Debug.Log("LeftClick");
-            Debug.Log(eventData.position);
-        }            
-        else if (eventData.button == PointerEventData.InputButton.Right)
-            Debug.Log("RightClick");
+            BuildInGameUI buildUI = GameManager.UI.ShowInGameUI<BuildInGameUI>("UI/BuildInGameUI");
+            buildUI.SetTarget(transform);
+            buildUI.SetOffset(new Vector2(0, 200f));
+        } 
     }
 
     public void OnPointerEnter(PointerEventData eventData)
