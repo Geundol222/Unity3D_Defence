@@ -10,13 +10,13 @@ namespace HomeWork0608
         {
             base.Awake();
 
-            buttons["Blocker"].onClick.AddListener(() => { GameManager.UI.CloseInGameUI<InGameUI>(this); });
+            buttons["Blocker"].onClick.AddListener(() => { GameManager.UI.CloseInGameUI<BuildInGameUI>(this); });
             buttons["BarrackButton"].onClick.AddListener(BuildBarrackTower);
         }
 
         public void BuildBarrackTower()
         {
-            TowerData barrack = GameManager.Resource.Load<TowerData>("0608/BarrackTowerData");
+            TowerData barrack = GameManager.Resource.Load<TowerData>("0608/Data/BarrackTowerData");
             towerPoint.BuildTower(barrack);
         }
     }

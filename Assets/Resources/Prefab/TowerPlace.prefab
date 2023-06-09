@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6758693417604503938}
   - component: {fileID: 6768764302751866382}
   - component: {fileID: 1882969840149031495}
-  - component: {fileID: 8758052995110064296}
+  - component: {fileID: 415285393826607330}
   m_Layer: 0
   m_Name: TowerPlace
   m_TagString: Untagged
@@ -98,7 +98,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8758052995110064296
+--- !u!114 &415285393826607330
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -8,7 +8,7 @@ namespace HomeWork0608
     {
         private void Awake()
         {
-            data = GameManager.Resource.Load<TowerData>("0608/BarrackTowerData");
+            data = GameManager.Resource.Load<TowerData>("0608/Data/BarrackTowerData");
         }
     }
 }

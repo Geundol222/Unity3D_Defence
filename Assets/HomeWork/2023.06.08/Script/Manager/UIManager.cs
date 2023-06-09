@@ -13,25 +13,24 @@ namespace HomeWork0608
         private Stack<PopUpUI> popUpStack;
 
         private Canvas windowCanvas;
-        private List<WindowUI> windowList;
 
         private Canvas inGameCanvas;
 
         private void Awake()
         {
-            eventSystem = GameManager.Resource.Instantiate<EventSystem>("0608/EventSystem");
+            eventSystem = GameManager.Resource.Instantiate<EventSystem>("0608/UI/EventSystem");
             eventSystem.transform.parent = transform;
 
-            popUpCanvas = GameManager.Resource.Instantiate<Canvas>("0608/Canvas");
+            popUpCanvas = GameManager.Resource.Instantiate<Canvas>("0608/UI/Canvas");
             popUpCanvas.gameObject.name = "PopUpCanvas";
             popUpCanvas.sortingOrder = 100;
             popUpStack = new Stack<PopUpUI>();
 
-            windowCanvas = GameManager.Resource.Instantiate<Canvas>("0608/Canvas");
+            windowCanvas = GameManager.Resource.Instantiate<Canvas>("0608/UI/Canvas");
             windowCanvas.gameObject.name = "WindowCanvas";
             windowCanvas.sortingOrder = 50;
 
-            inGameCanvas = GameManager.Resource.Instantiate<Canvas>("0608/Canvas");
+            inGameCanvas = GameManager.Resource.Instantiate<Canvas>("0608/UI/Canvas");
             inGameCanvas.gameObject.name = "InGameCanvas";
             inGameCanvas.sortingOrder = 0;
         }

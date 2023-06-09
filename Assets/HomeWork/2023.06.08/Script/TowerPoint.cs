@@ -21,7 +21,7 @@ namespace HomeWork0608
         {
             if (eventData.button == PointerEventData.InputButton.Left)
             {
-                BuildInGameUI buildUI = GameManager.UI.OpenInGameUI<BuildInGameUI>("0608/BuildInGameUI");
+                BuildInGameUI buildUI = GameManager.UI.OpenInGameUI<BuildInGameUI>("0608/UI/BuildInGameUI");
                 buildUI.SetTarget(transform);
                 buildUI.SetOffset(new Vector2(0, 200f));
                 buildUI.towerPoint = this;

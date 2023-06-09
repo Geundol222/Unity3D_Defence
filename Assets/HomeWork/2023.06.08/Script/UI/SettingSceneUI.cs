@@ -17,12 +17,12 @@ namespace HomeWork0608
 
         public void OpenInfoWindowUI()
         {
-            GameManager.UI.OpenWindowUI<WindowUI>("UI/InfoWindowUI");
+            GameManager.UI.OpenWindowUI<WindowUI>("0608/UI/InfoWindowUI");
         }
 
         public void OpenPausePopUpUI()
         {
-            GameManager.UI.OpenPopUpUI<PopUpUI>("UI/SettingPopUpUI");
+            GameManager.UI.OpenPopUpUI<PopUpUI>("0608/UI/SettingPopUpUI");
         }
     }
 }

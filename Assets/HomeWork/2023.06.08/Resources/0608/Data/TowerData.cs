@@ -5,8 +5,8 @@ using UnityEngine;
 
 namespace HomeWork0608
 {
-    [CreateAssetMenu (fileName = "TowerData", menuName = "Data/Tower")]
-    public class TowerData : MonoBehaviour
+    [CreateAssetMenu (fileName = "TowerData", menuName = "0608/Data/Tower")]
+    public class TowerData : ScriptableObject
     {
         [SerializeField] TowerInfo[] towers;
 
