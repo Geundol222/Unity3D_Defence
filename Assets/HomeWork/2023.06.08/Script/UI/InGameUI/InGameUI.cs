@@ -9,6 +9,8 @@ namespace HomeWork0608
         private Transform target;
         private Vector2 offset;
 
+        public TowerPoint towerPoint;
+
         private void LateUpdate()
         {
             if (target == null)
@@ -20,7 +22,7 @@ namespace HomeWork0608
             }
         }
 
-        private void SetTarget(Transform target)
+        public void SetTarget(Transform target)
         {
             this.target = target;
             if (target != null)
@@ -29,7 +31,7 @@ namespace HomeWork0608
             }
         }
 
-        private void SetOffset(Vector3 offset)
+        public void SetOffset(Vector3 offset)
         {
             this.offset = offset;
             if (target != null)

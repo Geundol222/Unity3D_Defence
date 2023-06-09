@@ -81,8 +81,6 @@ public class UIManager : MonoBehaviour
         T ui = GameManager.Pool.GetUI(windowUI);
         ui.transform.SetParent(windowCanvas.transform, false);
 
-        windowList.Add(ui);
-
         return ui;
     }
 
@@ -94,17 +92,7 @@ public class UIManager : MonoBehaviour
 
     public void SelectWindowUI<T>(T windowUI) where T : WindowUI
     {
-        // windowUI.transform.SetAsLastSibling();
-
-        for (int i = 0; i < windowList.Count; i++)
-        {
-            if (windowList[i] == windowUI)
-            {
-                windowList.RemoveAt(i);
-                break;
-            }
-        }
-        windowList.Add(windowUI);
+        windowUI.transform.SetAsLastSibling();
     }
 
     public void CloseWindowUI<T>(T windowUI) where T : WindowUI

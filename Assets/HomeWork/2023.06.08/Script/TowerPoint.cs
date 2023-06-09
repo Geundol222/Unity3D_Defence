@@ -20,9 +20,12 @@ namespace HomeWork0608
         public void OnPointerClick(PointerEventData eventData)
         {
             if (eventData.button == PointerEventData.InputButton.Left)
-                Debug.Log("LeftClick");
-            else
-                return;
+            {
+                BuildInGameUI buildUI = GameManager.UI.OpenInGameUI<BuildInGameUI>("0608/BuildInGameUI");
+                buildUI.SetTarget(transform);
+                buildUI.SetOffset(new Vector2(0, 200f));
+                buildUI.towerPoint = this;
+            }
         }
 
         public void OnPointerEnter(PointerEventData eventData)
@@ -33,6 +36,12 @@ namespace HomeWork0608
         public void OnPointerExit(PointerEventData eventData)
         {
             render.material.color = normal;
+        }
+
+        public void BuildTower(TowerData data)
+        {
+            GameManager.Resource.Destroy(gameObject);
+            GameManager.Resource.Instantiate(data.Towers[0].tower, transform.position, transform.rotation);
         }
     }
 }

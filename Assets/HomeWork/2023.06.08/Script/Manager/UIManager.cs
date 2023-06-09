@@ -80,8 +80,6 @@ namespace HomeWork0608
             T ui = GameManager.Pool.GetUI(windowUI);
             ui.transform.SetParent(windowCanvas.transform, false);
 
-            windowList.Add(ui);
-
             return ui;
         }
 
@@ -93,17 +91,7 @@ namespace HomeWork0608
 
         public void SelectWindowUI<T>(T windowUI) where T : WindowUI
         {
-            for (int i = 0; i < windowList.Count; i++)
-            {
-                if (windowList[i] == windowUI)
-                {
-                    GameManager.Pool.ReleaseUI(windowList[i]);
-                    windowList.RemoveAt(i);
-                    break;
-                }
-            }
-
-            OpenWindowUI(windowUI);
+            windowUI.transform.SetAsLastSibling();
         }
 
         public void CloseWindowUI<T>(T windowUI) where T : WindowUI
